@@ -1,0 +1,29 @@
+
+FROM openjdk:8-jdk-alpine
+MAINTAINER radhika.challa@ojas-it.com
+EXPOSE 6000
+COPY ojas-obs-kye-0.0.1-SNAPSHOT.jar  ojas-obs-kye-0.0.1-SNAPSHOT.jar
+COPY ojas-obs-project-details-0.0.1-SNAPSHOT.jar  ojas-obs-project-details-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java", "-jar", "ojas-obs-kye-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "ojas-obs-project-details-0.0.1-SNAPSHOT.jar"]
+
+docker run -it --name mastertest1 -p 192.168.1.155:6000:6000
+
+docker run -it --name mastertest2 -p 192.168.1.155:3030:3030 aa8b654064cd .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
